@@ -1,7 +1,10 @@
 
-
+	Addering af RomerTal.
 
         Test suite
+
+	Begrænset tal rum er fra [I til MMMMDCCCCLXXXXVIIII ] 
+
        ._____________________.____________. 
        | Input               | Output     |
        |---------------------|------------|
