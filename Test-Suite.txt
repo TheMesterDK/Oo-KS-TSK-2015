@@ -1,0 +1,26 @@
+Test suite		
+		
+Input		Output
+		
+IIIIII		VI
+		
+LLXXXVVI		CXXXXI
+		
+MMMMDCCCCLXXXXVIIII		
+		
+IIIII		V
+		
+VV		X
+		
+XXXXX		L
+		
+LL		C
+		
+CCCCC		D
+		
+DD		M
+		
+		Fejl
+		
+a=MCCXVII		MMCLXXVIII
+b=DCCCCLXI		
