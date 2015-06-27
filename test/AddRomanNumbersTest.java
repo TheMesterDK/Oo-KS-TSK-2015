@@ -17,9 +17,9 @@ public class AddRomanNumbersTest {
   @Test
   public void test() {
     
-    AddRomanNumb addRomanNumb = new AddRomanNumb();
+    AddRomanNumb addRomanNumb = new AddRomanNumb("III", "III");
     
-    addRomanNumb.setRomanNumber( "III", "III" );
+    //addRomanNumb.setRomanNumber( "III", "III" );
     
     String TestResultat = addRomanNumb.adder();
 //        adder("III","III") ;
@@ -34,7 +34,7 @@ public class AddRomanNumbersTest {
   @Test
   public void testEmptyStrings(){
     
-    AddRomanNumb addRomanNumb = new AddRomanNumb();
+    AddRomanNumb addRomanNumb = new AddRomanNumb("", "");
     
     String TestResultat = addRomanNumb.adder();
     
