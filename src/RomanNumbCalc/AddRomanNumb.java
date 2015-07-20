@@ -5,6 +5,7 @@ public class AddRomanNumb {
   public static String RomanOne;
   public static String RomanTwo;
   public static String Resultat;
+  public String FinalResult;
   public static String Ier;
   public static String Ver;
   public static String Xer;
@@ -107,9 +108,9 @@ public class AddRomanNumb {
         Ver = "V";
         break;
       case "V":
-        Ver += "V";
-        break;
-      case "VV":
+      //  Ver += "V";
+       // break;
+     // case "VV":
         Ver = "";
         Xer("X");
         break;
@@ -165,6 +166,16 @@ public class AddRomanNumb {
     Ver = "";
     Xer = "";
     Ler = "";
+  }
+  
+  public String MakeResult(){
+    FinalResult="";
+    //for(int l=0;l<=Resultat.length();l++){
+      //for(int i=0;i<Ier.length();i++)
+        //FinalResult += "I";
+    //}
+      FinalResult = Ier + Xer + Ver + Ler;
+    return FinalResult;
   }
   
 

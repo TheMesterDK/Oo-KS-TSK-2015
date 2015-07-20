@@ -23,30 +23,40 @@ public class Main {
     //3de test suit
     AddRomanNumb testThree = new AddRomanNumb( "LLXX", "XVVI" );
     testThree.adder();
+    testThree.MakeResult();
+    System.out.println(testThree.FinalResult);
     System.out.println(testThree);
     
     //4de test suit
     AddRomanNumb testFour = new AddRomanNumb( "MMMMDCCCI", "CLXXXXVIIII" );
     testFour.Nulstil();
     testFour.adder();
+    testFour.MakeResult();
+    System.out.println(testFour.FinalResult);
     System.out.println(testFour);
     
     //5th test suit
     AddRomanNumb testFive = new AddRomanNumb( "III", "II" );
     testFive.Nulstil();
     testFive.adder();
+    testFive.MakeResult();
+    System.out.println(testFive.FinalResult);
     System.out.println(testFive);
     
     //6th test suit
     AddRomanNumb testSix = new AddRomanNumb( "V", "V" );
     testSix.Nulstil();
     testSix.adder();
+    testSix.MakeResult();
+    System.out.println(testSix.FinalResult);
     System.out.println(testSix);
     
     //7th test suit
     AddRomanNumb testSeven = new AddRomanNumb( "XXX", "XX" );
     testSeven.Nulstil();
     testSeven.adder();
+    testSeven.MakeResult();
+    System.out.println(testSeven.FinalResult);
     System.out.println(testSeven);
     
     
