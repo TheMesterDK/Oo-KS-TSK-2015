@@ -22,6 +22,7 @@ public class Main {
     
     //3de test suit
     AddRomanNumb testThree = new AddRomanNumb( "LLXX", "XVVI" );
+    testThree.Nulstil();
     testThree.adder();
     testThree.MakeResult();
     System.out.println(testThree.FinalResult);

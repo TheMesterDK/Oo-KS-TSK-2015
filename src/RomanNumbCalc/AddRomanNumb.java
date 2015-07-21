@@ -10,6 +10,7 @@ public class AddRomanNumb {
   public static String Ver;
   public static String Xer;
   public static String Ler;
+  public static String Cer;
   
   // set konstuktor
   public AddRomanNumb(String One, String Two){
@@ -35,7 +36,7 @@ public class AddRomanNumb {
   }
 
   //get
-  public static String adder(){//String  One, String Two){
+  public String adder(){//String  One, String Two){
     Resultat = RomanOne+RomanTwo;
     
     for(int i=0;i<Resultat.length();i++) {
@@ -67,7 +68,8 @@ public class AddRomanNumb {
         //System.out.println(i+"L");
         Ler("L");
       else if(tegn =='C')
-        System.out.println(i+"C");
+        //System.out.println(i+"C");
+        Cer("C");
       else if(tegn =='D')
         System.out.println(i+"D");
       else if(tegn =='M')
@@ -96,7 +98,6 @@ public class AddRomanNumb {
         Ver("V");
         break;
     }
-    
   }
   
   public static void Ver(String V){
@@ -154,18 +155,44 @@ public class AddRomanNumb {
         break;
       case "LL":
         Ler= "";
-        //Cer("C");
+        Cer("C");
         break;
       //default:
       //  break;
     }
   }
   
+  public static void Cer( String C ) {
+    System.out.println("Cer");
+    if(Cer==null)
+      Cer="";
+    switch(Cer){
+      case "":
+        Cer = "C";
+        break;
+      case "C":
+        Cer += "C";
+        break;
+      case "CC":
+        Cer += "C";
+        break;
+      case "CCC":
+        Cer += "C";
+        break;
+      case "CCCC":
+        Cer = "";
+//      Der("D");
+        break;
+    }
+    
+  }
+
   public void Nulstil(){
     Ier ="";
     Ver = "";
     Xer = "";
     Ler = "";
+    Cer = "";
   }
   
   public String MakeResult(){
@@ -174,13 +201,13 @@ public class AddRomanNumb {
       //for(int i=0;i<Ier.length();i++)
         //FinalResult += "I";
     //}
-      FinalResult = Ier + Xer + Ver + Ler;
+      FinalResult = Ier + Xer + Ver + Ler + Cer;
     return FinalResult;
   }
   
 
   public String toString() {
     return "AddRomanNumb [RomanOne=" + RomanOne + ", RomanTwo=" + RomanTwo + ", Resultat=" + Resultat + "]"+
-  "[antal Ier:"+Ier+" antal Ver:"+Ver+" antal Xer:"+Xer+" antal Ler:"+Ler+"]";
+  "[antal Ier:"+Ier+" antal Ver:"+Ver+" antal Xer:"+Xer+" antal Ler:"+Ler+" antal Cer:"+Cer+"]";
   } 
 }
