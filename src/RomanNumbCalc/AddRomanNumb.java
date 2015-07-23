@@ -11,6 +11,7 @@ public class AddRomanNumb {
   public static String Xer;
   public static String Ler;
   public static String Cer;
+  public static String Der;
   
   // set konstuktor
   public AddRomanNumb(String One, String Two){
@@ -49,7 +50,7 @@ public class AddRomanNumb {
   }
   
   public static void Counter(String RomanString){
-    
+    //skift til en switch for at kunne fange ulovlige chars.
     for(int i=0;i<Resultat.length();i++) {
       char tegn = Resultat.charAt( i );
       if(tegn =='I')
@@ -71,7 +72,8 @@ public class AddRomanNumb {
         //System.out.println(i+"C");
         Cer("C");
       else if(tegn =='D')
-        System.out.println(i+"D");
+        //System.out.println(i+"D");
+        Der("D");
       else if(tegn =='M')
         System.out.println(i+"M");
     }
@@ -157,8 +159,6 @@ public class AddRomanNumb {
         Ler= "";
         Cer("C");
         break;
-      //default:
-      //  break;
     }
   }
   
@@ -181,10 +181,27 @@ public class AddRomanNumb {
         break;
       case "CCCC":
         Cer = "";
-//      Der("D");
+        Der("D");
         break;
     }
-    
+  }
+  
+  public static void Der( String D ) {
+    System.out.println("Der");
+    if(Der==null)
+      Der="";
+    switch(Der){
+      case "":
+        Der = "D";
+        break;
+      case "D":
+        Der += "D";
+        break;
+      case "DD":
+        Der = "";
+//      Mer("M");
+        break;
+    }
   }
 
   public void Nulstil(){
@@ -193,6 +210,7 @@ public class AddRomanNumb {
     Xer = "";
     Ler = "";
     Cer = "";
+    Der = "";
   }
   
   public String MakeResult(){
@@ -201,13 +219,13 @@ public class AddRomanNumb {
       //for(int i=0;i<Ier.length();i++)
         //FinalResult += "I";
     //}
-      FinalResult = Ier + Xer + Ver + Ler + Cer;
+      FinalResult = Ier + Xer + Ver + Ler + Cer + Der;
     return FinalResult;
   }
   
 
   public String toString() {
     return "AddRomanNumb [RomanOne=" + RomanOne + ", RomanTwo=" + RomanTwo + ", Resultat=" + Resultat + "]"+
-  "[antal Ier:"+Ier+" antal Ver:"+Ver+" antal Xer:"+Xer+" antal Ler:"+Ler+" antal Cer:"+Cer+"]";
+  "[antal Ier:"+Ier+" antal Ver:"+Ver+" antal Xer:"+Xer+" antal Ler:"+Ler+" antal Cer:"+Cer+" antal Der:"+Der+"]";
   } 
 }
