@@ -12,6 +12,7 @@ public class AddRomanNumb {
   public static String Ler;
   public static String Cer;
   public static String Der;
+  public static String Mer;
   
   // set konstuktor
   public AddRomanNumb(String One, String Two){
@@ -75,7 +76,8 @@ public class AddRomanNumb {
         //System.out.println(i+"D");
         Der("D");
       else if(tegn =='M')
-        System.out.println(i+"M");
+        Mer("M");
+        //System.out.println(i+"M");
     }
   }
   
@@ -111,9 +113,6 @@ public class AddRomanNumb {
         Ver = "V";
         break;
       case "V":
-      //  Ver += "V";
-       // break;
-     // case "VV":
         Ver = "";
         Xer("X");
         break;
@@ -199,7 +198,30 @@ public class AddRomanNumb {
         break;
       case "DD":
         Der = "";
-//      Mer("M");
+      Mer("M");
+        break;
+    }
+  }
+  
+  public static void Mer( String M ) {
+    System.out.println("Mer");
+    if(Mer==null)
+      Mer="";
+    switch(Mer){
+      case "":
+        Mer = "M";
+        break;
+      case "M":
+        Mer += "M";
+        break;
+      case "MM":
+        Mer += "M";
+        break;
+      case "MMM":
+        Mer += "M";
+        break;
+      case "MMMM":
+        //Mer = "";
         break;
     }
   }
@@ -211,6 +233,7 @@ public class AddRomanNumb {
     Ler = "";
     Cer = "";
     Der = "";
+    Mer = "";
   }
   
   public String MakeResult(){
@@ -219,13 +242,13 @@ public class AddRomanNumb {
       //for(int i=0;i<Ier.length();i++)
         //FinalResult += "I";
     //}
-      FinalResult = Ier + Xer + Ver + Ler + Cer + Der;
+      FinalResult = Ier + Xer + Ver + Ler + Cer + Der + Mer;
     return FinalResult;
   }
   
 
   public String toString() {
     return "AddRomanNumb [RomanOne=" + RomanOne + ", RomanTwo=" + RomanTwo + ", Resultat=" + Resultat + "]"+
-  "[antal Ier:"+Ier+" antal Ver:"+Ver+" antal Xer:"+Xer+" antal Ler:"+Ler+" antal Cer:"+Cer+" antal Der:"+Der+"]";
+  "[antal Ier:"+Ier+" antal Ver:"+Ver+" antal Xer:"+Xer+" antal Ler:"+Ler+" antal Cer:"+Cer+" antal Der:"+Der+" antal Mer:"+Mer+ "]";
   } 
 }
